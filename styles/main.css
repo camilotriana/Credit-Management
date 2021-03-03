@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+#maintitle{
+    font-size: 320%;
+    font-family: Courgette;
+    text-shadow: 2px 2px 3px greenyellow;
+}
+#logo1{
+    display:block;
+    margin:auto;
+    padding-top: 4%;
+}
+#logo2{
+    display:block;
+    margin:auto;
+    padding-top: 4%;
+    
+}
+h3{
+    color: #337DFF ;
+}
+#divCabezera{
+    background-color: #E8F8F5;
+    border-radius: 10px;
+}
+#menu{
+    background-color: #E8F8F5;
+    border-radius: 10px;
+}
+#consultar {
+    margin-bottom: 2%;
+}

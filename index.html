@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CREDITOS FINANCIEROS TRIMA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="row" id="divCabezera">
+            <br>
+            <hr>
+            <div class="col-md-3">
+                <img id="logo1" src="images/logof.PNG">
+            </div>
+            <div class="col-md-6">
+                <hr>
+                <hr>
+                <h1 id="maintitle">FINANCIERA TRIMA</h1>
+                <hr>
+                <hr>
+            </div>
+            <div class="col-md-3">
+                <img id="logo2" src="images/logof.PNG">
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-3" id="menu">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <br>
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-InfGeneral"
+                        role="tab" aria-controls="v-pills-home" aria-selected="true">INFORMACION GENERAL</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-InfCredito"
+                        role="tab" aria-controls="v-pills-profile" aria-selected="false">CONSULTAR CREDITO</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-Pagar" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false">PAGAR CUOTA</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Solicitar"
+                        role="tab" aria-controls="v-pills-settings" aria-selected="false">SOLICITAR CREDITO</a>
+                </div>
+            </div>
+            <div class="col-md-9" id="contenido">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-InfGeneral" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <h3>Empresa</h3>
+                        <hr>
+                        <p>TRIMA es una entidad financiera que surge para ayudar a las personas y
+                            su principal funcion es la gestion de los creditos.
+                        </p>
+                        <hr>
+                        <h3>¿Como funcionan los creditos?</h3>
+                        <hr>
+                        <ul>
+                            <li>El tipo de interes que utiliza TRIMA es interes simple.</li>
+                            <li>La taza de interes mensual para todos los creditos es del 2%.</li>
+                            <li>El credito se puede financiar a 1,2 o 3 años.</li>
+                            <li>El credito maximo que se puede solicitar a TRIMA es de $10.000.000</li>
+                        </ul>
+                        <hr>
+                        <h3>¿Cuales son los requerimientos para un credito?</h3>
+                        <hr>
+                        <ul>
+                            <li>La persona debe ser mayor de edad.</li>
+                            <li>La persona actualmente debe estar trabajando.</li>
+                            <li>Los ingresos mensuales de la persona no pueden ser inferiores a $1.000.000</li>
+                            <li>Si la persona ya cuenta con un credito en la entidad financiera TRIMA, no podra
+                                solicitar mas hasta que termine de pagar este.</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-InfCredito" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <form id="formularioConsulta">
+                            <h3>ACERCA DE MI CREDITO</h3>
+                            <hr>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="consultarDocumento">Numero de Documento:</label>
+                                    <input type="text" id="consultarDocumento" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <button id="consultar" type="submit"
+                                        class="btn btn-primary btn-block">CONSULTAR</button>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <button id="limpiar" type="button"
+                                        class="btn btn-dark btn-block">LIMPIAR</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="proteccionConsulta"></div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Pagar" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <div id="usuarioSaldo">
+                            <form id="formularioUsuario">
+                                <h3>ADMINISTRADOR</h3>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="usuario">USUARIO:</label>
+                                        <input type="text" id="usuario" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="contrasena">CONTRASEÑA:</label>
+                                        <input type="password" id="contrasena" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <button id="aceptar" type="button"
+                                            class="btn btn-primary btn-block">ACEPTAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="proteccion">
+                            <form id="formularioSaldo">
+                                <h3>ABONAR SALDO</h3>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="saldoDocumento">Numero de Documento:</label>
+                                        <input type="text" id="saldoDocumento" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="csaldoDocumento">Confirmar Numero de Documento:</label>
+                                        <input type="text" id="csaldoDocumento" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="vconsignar">Valor a Consignar:</label>
+                                        <input type="number" id="vconsignar" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <button id="consignar" type="button"
+                                            class="btn btn-primary btn-block">CONSIGNAR</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="salir" type="button"
+                                            class="btn btn-primary btn-block">SALIR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Solicitar" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">
+                        <div id="usuarioSolicitud">
+                            <form id="sformularioUsuario">
+                                <h3>ADMINISTRADOR</h3>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="susuario">USUARIO:</label>
+                                        <input type="text" id="susuario" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="scontrasena">CONTRASEÑA:</label>
+                                        <input type="password" id="scontrasena" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <button id="saceptar" type="button"
+                                            class="btn btn-primary btn-block">ACEPTAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="proteccionSolicitud">
+                            <form id="formulario">
+                                <h3>SOLICITUD DE CREDITO</h3>
+                                <hr>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nombre">Nombre:</label>
+                                        <input type="text" id="nombre" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="apellido">Apellido:</label>
+                                        <input type="text" id="apellido" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="documento">Numero de Documento:</label>
+                                        <input type="text" id="documento" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="cdocumento">Confirmar Numero de Documento:</label>
+                                        <input type="text" id="cdocumento" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="edad">Edad:</label>
+                                        <input type="number" id="edad" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="celular">Celular:</label>
+                                        <input type="text" id="celular" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="correo">Correo Electronico:</label>
+                                        <input type="email" id="correo" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="departamento">Departamento:</label>
+                                        <input type="text" id="departamento" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="ciudad">Ciudad:</label>
+                                        <input type="text" id="ciudad" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="direccion">Direccion:</label>
+                                        <input type="text" id="direccion" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="trabajo">¿Actualmente tiene un trabajo?</label>
+                                        <select id="trabajo" class="form-control" required>
+                                            <option value="1">SI</option>
+                                            <option value="2">NO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="profesion">Profesion:</label>
+                                        <input type="text" id="profesion" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="puesto">Puesto Actual:</label>
+                                        <input type="text" id="puesto" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="ingresos">Ingresos Mensuales:</label>
+                                        <input type="number" id="ingresos" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="cingresos">Confirmar Ingresos Mensuales:</label>
+                                        <input type="number" id="cingresos" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="credito">Valor del Credito:</label>
+                                        <input type="number" id="credito" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="ccredito">Confirmar Valor del Credito:</label>
+                                        <input type="number" id="ccredito" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="ncuotas">¿Seleccione el numero de cuotas con el que desea
+                                            pagar?</label>
+                                        <select id="ncuotas" class="form-control" required>
+                                            <option value="12">12</option>
+                                            <option value="24">24</option>
+                                            <option value="36">36</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <button id="solicitar" type="submit"
+                                            class="btn btn-primary btn-block">SOLICITAR</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="ssalir" type="button"
+                                            class="btn btn-primary btn-block">SALIR</button>
+                                    </div>
+                                    <br><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/creditsOperations.js"></script>
+    <script src="js/protection.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
